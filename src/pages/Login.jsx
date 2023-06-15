@@ -100,22 +100,22 @@ const Login = () => {
                             <div className="list-bt">
                                 <div className="btn-ne">
                                     <i className="fa-brands fa-facebook"></i>
-                                    <div>Facebook</div>
+                                    <div style={{fontWeight: 500,}}>Facebook</div>
                                 </div>
                                 <div className="btn-ne">
                                     <i className="fa-brands fa-google"></i>
-                                    <div>Google</div>
+                                    <div style={{fontWeight: 500,}}>Google</div>
                                 </div>
                             </div>
-                            <div className="text-center">
+                            <div className="text-center" style={{fontWeight: 500,}}>
                                 Bằng việc chọn Đăng Nhập, bạn xác nhận đã đọc &<br />
                                 đồng ý với các
-                                <span style={{ color: "#00BBA6", cursor: "pointer" }}>
+                                <span style={{ fontWeight: 500, color: "#00BBA6", cursor: "pointer" }}>
                                     {" "}
                                     Chính Sách Bảo Mật & Chia Sẻ Thông Tin
                                 </span>
                                 <br />
-                                <span style={{ color: "red", cursor: "pointer" }}>của Beauty Outfits.</span>
+                                <span style={{ fontWeight: 500, color: "red",}}>của Beauty Outfits.</span>
                             </div>
                         </div>
                     </div>

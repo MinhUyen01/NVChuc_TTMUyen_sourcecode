@@ -57,7 +57,7 @@ ul li a {
     color: #333333;
 }
 ul li a.active {
-    border-bottom: 2px solid;
+    /* border-bottom: 2px solid; */
     color: #00bba6;
 }
 .search-container {
@@ -528,15 +528,15 @@ ol.carousel-indicators .active {
 .caorousel-title {
     width: 359px;
     height: 129px;
-
+    text-shadow: 0 0 1px #000;
     font-family: "MonteCarlo";
     font-style: normal;
     font-weight: 400;
     font-size: 76px;
     line-height: 129px;
-    display: flex;
+    /* display: flex;
     align-items: center;
-    text-align: center;
+    text-align: center; */
 }
 
 .product_title {
@@ -591,6 +591,8 @@ ol.carousel-indicators .active {
 }
 
 .carousel-subtitle {
+    text-shadow: 0 0 1px #000;
+    margin: auto;
     width: 553px;
     height: 38px;
     font-family: "Quicksand";

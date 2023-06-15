@@ -22,19 +22,22 @@ export default function PaymentComponent({ steps, setSteps, idx, setSelected }) 
     }
     return (
         <div className="row p-3">
-            <div className="pay mt-5" style={{ width: "100%", padding: 10 }}>
+            <div className="pay" style={{ width: "100%", padding: 30 }}>
                 <div className="pay_left left col-8 p-0">
                     <div className="border section_container">
-                        <div className="address m-3">
-                            <div className="title-content d-flex justify-content-between">
+                        <div className="address">
+                            <div className="title-content d-flex justify-content-between" style={{padding: "16px 20px", borderBottom: "1px solid #dddddd"}}>
                                 <p
                                     style={{
+                                        display: "flex",
+                                        margin: 0,
+                                        alignItems: "center",
                                         fontStyle: "normal",
                                         fontWeight: 700,
                                         fontSize: 20,
                                     }}
                                 >
-                                    Địa chỉ nhận hàng
+                                    Địa Chỉ Nhận Hàng
                                 </p>
 
                                 <a
@@ -52,8 +55,8 @@ export default function PaymentComponent({ steps, setSteps, idx, setSelected }) 
                                     Thay đổi
                                 </a>
                             </div>
-                            <div className="content-txt">
-                                <div className="dislay-flex mt-3 name-phone">
+                            <div className="content-txt" style={{padding: "20px 20px 16px"}}>
+                                <div className="dislay-flex name-phone">
                                     <div className="name-customer padding-right-10">
                                         <p
                                             style={{
@@ -80,12 +83,12 @@ export default function PaymentComponent({ steps, setSteps, idx, setSelected }) 
                             </div>
                         </div>
                     </div>
-                    <div className="cart-detail mt-2">
+                    <div className="cart-detail" style={{marginTop: 30}}>
                         <div className="table-wrapper">
                             <table className="cart mb-2" style={{ width: "100%" }}>
                                 <thead className="table-head bg-table">
                                     <tr>
-                                        <th className="product">Sản Phẩm</th>
+                                        <th className="product" style={{textAlign: "start", paddingLeft: 30}}>Sản Phẩm</th>
                                         <th className="quantity">Số Lượng</th>
                                         <th>Thành Tiền</th>
                                     </tr>
@@ -94,7 +97,7 @@ export default function PaymentComponent({ steps, setSteps, idx, setSelected }) 
                                 <tbody className="mr-3">
                                     {Array.from({ length: 2 }).map((_, idx) => (
                                         <tr key={idx}>
-                                            <td className="product">
+                                            <td className="product" style={{margin: "20px 30px"}}>
                                                 <div className="product-img">
                                                     <img src={dataProduct[idx].img} alt="" />
                                                 </div>
@@ -105,6 +108,7 @@ export default function PaymentComponent({ steps, setSteps, idx, setSelected }) 
                                                                 fontStyle: "normal",
                                                                 fontWeight: 600,
                                                                 fontSize: 16,
+                                                                color: "#333",
                                                             }}
                                                         >
                                                             {dataProduct[idx].name}
@@ -116,6 +120,7 @@ export default function PaymentComponent({ steps, setSteps, idx, setSelected }) 
                                                                 fontStyle: "normal",
                                                                 fontWeight: 500,
                                                                 fontSize: 15,
+                                                                color: "#666"
                                                             }}
                                                         >
                                                             Phân loại: Trắng, Size M
@@ -156,9 +161,10 @@ export default function PaymentComponent({ steps, setSteps, idx, setSelected }) 
                                                         fontStyle: "normal",
                                                         fontWeight: 600,
                                                         fontSize: 18,
+                                                        color: "#333"
                                                     }}
                                                 >
-                                                    {idx === 0 ? 2 : 1}
+                                                    {idx === 0 ? 1 : 1}
                                                 </p>
                                             </td>
                                             <td className="into-money">
@@ -170,7 +176,7 @@ export default function PaymentComponent({ steps, setSteps, idx, setSelected }) 
                                                         color: "#00BBA6",
                                                     }}
                                                 >
-                                                    238.000đ
+                                                    119.000đ
                                                 </p>
                                             </td>
                                         </tr>
@@ -183,29 +189,35 @@ export default function PaymentComponent({ steps, setSteps, idx, setSelected }) 
                         <div className="col-6 pl-0">
                             <p
                                 style={{
+                                    marginTop: 30, 
                                     fontStyle: "normal",
-                                    fontWeight: 600,
+                                    fontWeight: 700,
                                     fontSize: 16,
                                 }}
                             >
-                                Ngày bắt đầu thuê
+                                Ngày Bắt Đầu Thuê
                             </p>
-                            <DatePicker showIcon selected={startDate} onChange={(date) => setStartDate(date)} />
+                            <div style={{border: "1px solid #dddddd"}}>
+                                <DatePicker showIcon selected={startDate} onChange={(date) => setStartDate(date)} />
+                            </div>
                         </div>
                         <div className="col-6 pr-1">
                             <p
                                 style={{
+                                    marginTop: 30, 
                                     fontStyle: "normal",
-                                    fontWeight: 600,
+                                    fontWeight: 700,
                                     fontSize: 16,
                                 }}
                             >
-                                Ngày trả hàng
+                                Ngày Trả Hàng
                             </p>
-                            <DatePicker showIcon selected={endDate} onChange={(date) => setEndDate(date)} />
+                            <div style={{border: "1px solid #dddddd"}}>
+                                <DatePicker showIcon selected={endDate} onChange={(date) => setEndDate(date)} />
+                            </div>
                         </div>
                     </div>
-                    <div className="border section_container mt-3">
+                    <div style={{marginTop: 30}}>
                         <textarea
                             name="not"
                             id=""
@@ -217,29 +229,30 @@ export default function PaymentComponent({ steps, setSteps, idx, setSelected }) 
                                 backgroundColor: "transparent",
                                 fontSize: 20,
                                 fontWeight: 500,
+                                color: "#333",
                             }}
-                            placeholder="Ghi chú"
+                            placeholder="Ghi chú: "
                         ></textarea>
                     </div>
                 </div>
 
                 {/* <!-- right --> */}
-                <div className="pay-right right col-4">
+                <div className="pay-right right col-4" style={{padding: "0 0 0 30px"}}>
                     <div className="border section_container ">
                         <div>
-                            <div className="title-content p-3" style={{ borderBottom: "1px solid #e5e5e5" }}>
+                            <div className="title-content" style={{ padding: "16px 20px", borderBottom: "1px solid #dddddd" }}>
                                 <p style={{ fontSize: 20, fontWeight: 700, margin: 0 }}>Phương Thức Thanh Toán</p>
                             </div>
-                            <div className="content-txt p-3">
+                            <div className="content-txt p-3" style={{marginLeft: 5,}}>
                                 <form>
-                                    <div className="d-flex align-items-center" style={{ gap: 10 }}>
+                                    <div className="d-flex align-items-center" style={{ gap: 10, margin: "5px 0 20px 0", }}>
                                         <input
                                             className="test"
                                             type="checkbox"
                                             value=""
                                             defaultChecked
                                             id="check1"
-                                            style={{ height: 15, width: 15 }}
+                                            style={{ height: 20, width: 20 }}
                                         />
                                         <label
                                             className="m-0"
@@ -248,13 +261,14 @@ export default function PaymentComponent({ steps, setSteps, idx, setSelected }) 
                                                 fontStyle: "normal",
                                                 fontWeight: 500,
                                                 fontSize: 18,
+                                                color: "#333"
                                             }}
                                         >
                                             Thanh toán khi nhận hàng
                                         </label>
                                     </div>
-                                    <div className="d-flex align-items-center" style={{ gap: 10 }}>
-                                        <input type="checkbox" value="" id="check2" style={{ height: 15, width: 15 }} />
+                                    <div className="d-flex align-items-center" style={{ gap: 10, margin: "0 0 5px 0" }}>
+                                        <input type="checkbox" value="" id="check2" style={{ height: 20, width: 20 }} />
                                         <label
                                             className="m-0"
                                             for="check2"
@@ -262,6 +276,7 @@ export default function PaymentComponent({ steps, setSteps, idx, setSelected }) 
                                                 fontStyle: "normal",
                                                 fontWeight: 500,
                                                 fontSize: 18,
+                                                color: "#333"
                                             }}
                                         >
                                             Chuyển khoản
@@ -272,27 +287,23 @@ export default function PaymentComponent({ steps, setSteps, idx, setSelected }) 
                         </div>
                     </div>
 
-                    <div className="border p-3 section_container mt-4">
+                    <div className="border section_container" style={{marginTop: 30}}>
                         <div>
                             <div className="title-content">
-                                <p style={{ fontSize: 20, fontWeight: 700, margin: 0 }}>Mã Giảm Giá</p>
+                                <p style={{ fontSize: 20, fontWeight: 700, margin: 0 , padding: "16px 20px", borderBottom: "1px solid #dddddd"}}>Mã Giảm Giá</p>
                             </div>
 
-                            <div className="form-group mt-3 margin-020">
-                                <input placeholder="Nhập mã giảm giá" type="text" className="border form-control" />
+                            <div className="form-group margin-020" style={{margin: 20}}>
+                                <input placeholder="Nhập mã giảm giá" type="text" className="border form-control" style={{height: 50}}/>
                             </div>
-                            <div className="otp-option mt-3 margin-020">
+                            <div className="otp-option margin-020" style={{margin: 20}}>
                                 <button
                                     type="button"
-                                    className="btn"
+                                    className="btn btn-active-red"
                                     style={{
                                         width: 168,
                                         height: 40,
-                                        backgroundColor: "#00BBA6",
-                                        cursor: "pointer",
-                                        color: "#ffffff",
                                         fontWeight: 700,
-                                        fontStyle: "normal",
                                         fontSize: 18,
                                     }}
                                 >
@@ -302,14 +313,14 @@ export default function PaymentComponent({ steps, setSteps, idx, setSelected }) 
                         </div>
                     </div>
 
-                    <div className="border section_container mt-4">
-                        <div className="p-3">
-                            <div className="title-content">
-                                <p style={{ fontSize: 20, fontWeight: 700, margin: 0 }}>Đơn Hàng</p>
+                    <div className="border section_container" style={{marginTop: 30}}>
+                        <div>
+                            <div className="title-content" style={{borderBottom: "1px solid #dddddd"}}>
+                                <p style={{ fontSize: 20, fontWeight: 700, margin: 0, padding: "20px 30px"}}>Đơn Hàng</p>
                             </div>
 
-                            <div className="all_bill mt-3">
-                                <div className="d-flex justify-content-between">
+                            <div className="all_bill">
+                                <div className="d-flex justify-content-between" style={{padding: "20px 30px", borderBottom: "1px solid #dddddd"}}>
                                     <div className="title_bill">
                                         <p
                                             style={{
@@ -339,7 +350,7 @@ export default function PaymentComponent({ steps, setSteps, idx, setSelected }) 
                                             Khuyến mãi:
                                         </p>
                                     </div>
-                                    <div className="value_bill">
+                                    <div className="value_bill" style={{display: "flex", flexDirection: "column", alignItems: "end"}}>
                                         <p
                                             style={{
                                                 fontStyle: "normal",
@@ -347,7 +358,7 @@ export default function PaymentComponent({ steps, setSteps, idx, setSelected }) 
                                                 fontSize: 18,
                                             }}
                                         >
-                                            357.000đ
+                                            238.000đ
                                         </p>
                                         <p
                                             style={{
@@ -370,13 +381,14 @@ export default function PaymentComponent({ steps, setSteps, idx, setSelected }) 
                                     </div>
                                 </div>
 
-                                <div className="d-flex justify-content-between mt-5">
+                                <div className="d-flex justify-content-between" style={{padding: "20px 30px", }}>
                                     <div className="title_sum_bill">
                                         <p
                                             style={{
                                                 fontStyle: "normal",
-                                                fontWeight: 600,
-                                                fontSize: 16,
+                                                fontWeight: 700,
+                                                fontSize: 18,
+                                                margin: 0,
                                             }}
                                         >
                                             Tổng thanh toán:
@@ -389,19 +401,22 @@ export default function PaymentComponent({ steps, setSteps, idx, setSelected }) 
                                                 fontWeight: 700,
                                                 fontSize: 20,
                                                 color: "#E74B32",
+                                                margin: 0
                                             }}
                                         >
-                                            362.000đ
+                                            243.000đ
                                         </p>
                                     </div>
                                 </div>
-                                <button
-                                    onClick={() => handleClick()}
-                                    className="btn"
-                                    style={{ backgroundColor: "#00BBA6", color: "#ffffff", width: "100%" }}
-                                >
-                                    Đặt hàng
-                                </button>
+                                <div style={{margin: "0 30px 30px"}}>
+                                    <button
+                                        onClick={() => handleClick()}
+                                        className="btn btn-active-red"
+                                        style={{ height: 40, fontSize: 18, fontWeight: 700, color: "#ffffff", width: "100%" }}
+                                    >
+                                        Đặt Hàng
+                                    </button>
+                                </div>
                             </div>
                         </div>
                     </div>

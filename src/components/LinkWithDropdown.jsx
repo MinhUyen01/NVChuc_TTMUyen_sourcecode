@@ -17,7 +17,7 @@ export default function LinkWithDropdown({ to, children }) {
             </Link>
             <div className="dropdown-menu" style={{ width: 238, top: 56 }}>
                 <Link to="/user/profile" className="dropdown-item">
-                    Thông tin tài khoảng
+                    Thông tin tài khoản
                 </Link>
                 <Link to="/user/order" className="dropdown-item">
                     Đơn hàng của tôi

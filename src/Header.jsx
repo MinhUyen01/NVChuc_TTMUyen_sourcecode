@@ -5,7 +5,8 @@ import { UserContext } from "./UserContext.jsx";
 import { useLocation } from "react-router-dom";
 
 import Logo from "./assets/img/logo/logobeau.png";
-import Cart1 from "./assets/img/cart/sp1.png";
+import Cart1 from "./assets/img/cart/sp1.jpg";
+import Cart2 from "./assets/img/cart/sp2.jpeg";
 import { useAuthContext } from "./auth/useAuthContext.js";
 import { toast, ToastContainer } from "react-toastify";
 
@@ -40,7 +41,32 @@ export default function Header() {
             navigate("/cart");
             console.log(isAuthenticated);
         }else {
-            toast.error("vui lòng đăng nhập")
+            toast.error("Vui lòng đăng nhập")
+        }
+        
+    };
+
+    // 
+    const handleCartMenu = (e) => {
+        e.preventDefault();
+
+        if(isAuthenticated) {
+            navigate("/cart");
+            console.log(isAuthenticated);
+        }else {
+            toast.error("Vui lòng đăng nhập")
+        }
+        
+    };
+
+    const handleFavoriteProduct = (e) => {
+        e.preventDefault();
+
+        if(isAuthenticated) {
+            navigate("user/favorite");
+            console.log(isAuthenticated);
+        }else {
+            toast.error("Vui lòng đăng nhập")
         }
         
     };
@@ -74,8 +100,9 @@ export default function Header() {
                                     </Link>
                                 </li>
                                 <li>
-                                    <Link to={"/product"}>
-                                        <p style={{
+                                    <Link to={"/user/favorite"}>
+                                        <p onClick={(e) => handleFavoriteProduct(e)}
+                                        style={{
                                             fontStyle: "normal",
                                             fontWeight: 500,
                                             fontSize: 13,
@@ -84,7 +111,8 @@ export default function Header() {
                                 </li>
                                 <li>
                                     <Link to={"/cart"}>
-                                        <p style={{
+                                        <p onClick={(e) => handleCartMenu(e)}
+                                        style={{
                                             fontStyle: "normal",
                                             fontWeight: 500,
                                             fontSize: 13,
@@ -108,6 +136,7 @@ export default function Header() {
                                                     fontStyle: "normal",
                                                     fontWeight: 500,
                                                     fontSize: 13,
+                                                    marginRight: 20,
                                                 }}>Đăng Nhập</p>
                                             </Link>
                                         </li>
@@ -116,9 +145,9 @@ export default function Header() {
                                     <LinkWithDropdown to="#" style={{ color: "#00BBA6", padding: "7px 10px " }}>
                                             <i
                                                 className="fa fa-user-circle-o"
-                                                style={{ color: "#00BBA6", marginRight: 2 }}
+                                                style={{ color: "#00BBA6", marginRight: 2, marginLeft: 10, fontSize: 15 }}
                                             />
-                                            <span style={{ color: "#00BBA6", "::after": { display: "none" } }}>
+                                            <span style={{ color: "#00BBA6", marginRight: 20, fontSize: 13, fontWeight: 500, "::after": { display: "none" } }}>
                                                 Tài khoản
                                             </span>
                                         </LinkWithDropdown>
@@ -185,7 +214,7 @@ export default function Header() {
                                             <div className="cart_item">
                                                 <div className="cart_img">
                                                     <a href="#">
-                                                        <img src={Cart1} alt="" />
+                                                        <img src={Cart2} alt="" />
                                                     </a>
                                                 </div>
                                                 <div className="cart_info">
@@ -205,9 +234,9 @@ export default function Header() {
                                                 <button
                                                     onClick={(e) => handleCart(e)}
                                                     className="btn btn_add_cart"
-                                                    style={{ color: "#ffffff", backgroundColor: "#00BBA6" }}
+                                                    style={{ height: 32, fontSize: 14, fontWeight: 600, color: "#ffffff", backgroundColor: "#00BBA6", borderRadius: 3 }}
                                                 >
-                                                    Xem giỏ hàng
+                                                    Xem Giỏ Hàng
                                                 </button>
                                             </div>
                                         </div>

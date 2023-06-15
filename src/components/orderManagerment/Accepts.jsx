@@ -1,6 +1,4 @@
-import Product1 from "../../assets/img/product/pr1.png";
 import {dataProduct} from '../../data/product';
-
 export default function Accepts() {
     return (
         <>
@@ -20,7 +18,7 @@ export default function Accepts() {
                     <input
                         type="text"
                         className="form-control"
-                        placeholder="tìm đơn hàng theo 'Mã đơn hàng' hoặc 'Tên sản phẩm'"
+                        placeholder="Tìm đơn hàng theo 'Mã đơn hàng' hoặc 'Tên sản phẩm'"
                     />
                 </div>
             </div>
@@ -38,7 +36,7 @@ export default function Accepts() {
                 </div>
             </div>
 
-            <div className="container-product">
+            <div className="container-product"  style={{paddingBottom: 50}}>
                 <div className="content">
                     {Array.from({length: 2}).map((_,idx)=> (
                          <div key={idx} className="product-item" style={{ padding: 10, borderBottom: "1px solid #DDDDDD" }}>
@@ -52,20 +50,20 @@ export default function Accepts() {
                                          <p className="prod_name">{dataProduct[idx].name}</p>
                                      </div>
                                      <div className="text-type-size prod_desc">
-                                         <p>Phân loại: Trắng, Size M</p>
+                                         <p style={{fontSize: 15, fontWeight: 500, color: "#333"}}>Phân loại: Trắng, Size M</p>
                                      </div>
                                      <div className="text-number-product prod_desc">
-                                         <p>Số lượng: 1</p>
+                                         <p style={{fontSize: 15, fontWeight: 500, color: "#333"}}>Số lượng: 1</p>
                                      </div>
                                  </div>
                              </div>
 
                              <div className="product-right product-price d-flex col-6">
                                  <div className="old_price">
-                                     <p>{dataProduct[idx].oldPrice}</p>
+                                     <p style={{fontSize: 14, fontWeight: 500, color: "#333"}}>{dataProduct[idx].oldPrice}</p>
                                  </div>
                                  <div className="price">
-                                     <p>{dataProduct[idx].price}</p>
+                                     <p style={{fontSize: 18, fontWeight: 600, color: "#333"}}>{dataProduct[idx].price}</p>
                                  </div>
                              </div>
                          </div>
@@ -77,19 +75,19 @@ export default function Accepts() {
                         <div className="common-option">
                             <div className="order-total d-flex justify-content-end align-item-center">
                                 <div className="order-total-title">
-                                    <label>Tổng tiền:</label>
+                                    <label style={{ margin: 0, fontSize: 15, fontWeight: 500, color: "#333" }}>Tổng tiền:</label>
                                 </div>
                                 <div className="order-total-price">
-                                    <span className="vlaue-summary">238.000đ</span>
+                                    <span className="vlaue-summary">243.000đ</span>
                                 </div>
                             </div>
                             <div className="btn-option">
                                 <button
                                     type="submit"
-                                    className="btn btn-white"
-                                    style={{ alignItems: "center", display: "flex" }}
+                                    className="btn btn-active-greyish"
+                                    style={{ height: 38, width: 190, justifyContent: "center", alignItems: "center", display: "flex", fontSize: 16, fontWeight: 600, color: "#666" }}
                                 >
-                                    <a href="">Xem chi tiết</a>
+                                    <a href="">Xem Chi Tiết</a>
                                 </button>
                             </div>
                         </div>

@@ -54,7 +54,7 @@ const Register = () => {
                                                 Nhập mật khẩu <aside>*</aside>
                                             </b>
                                         </label>
-                                        <input type="text" name="first-name" placeholder="Nhập mã PIN..." />
+                                        <input type="text" name="first-name" placeholder="Nhập mật khẩu..." />
                                     </div>
 
                                     <div className="form-group" style={{ textAlign: "left" }}>
@@ -63,7 +63,7 @@ const Register = () => {
                                                 Nhập lại mật khẩu<aside>*</aside>
                                             </b>
                                         </label>
-                                        <input type="text" name="first-name" placeholder="Nhập lại mã PIN..." />
+                                        <input type="text" name="first-name" placeholder="Nhập lại mật khẩu..." />
                                     </div>
                                     <div className="bt-main" style={{ backgroundColor: "#CACACA" }}>
                                         <b>Đăng nhập</b>
@@ -71,10 +71,10 @@ const Register = () => {
                                 </form>
                             </div>
 
-                            <div className="text-center mt-3">
+                            <div className="text-center mt-3" style={{fontWeight: 500,}}>
                                 Bằng việc chọn Đăng Nhập, bạn xác nhận đã đọc &<br />
-                                đồng ý với các
-                                <span style={{ color: "#00BBA6" }}>Chính Sách Bảo Mật & Chia Sẻ Thông Tin</span>
+                                đồng ý với các 
+                                <span style={{ cursor: "pointer", color: "#00BBA6" }}> Chính Sách Bảo Mật & Chia Sẻ Thông Tin</span>
                                 <br />
                                 <span style={{ color: "red" }}>của Beauty Outfits.</span>
                             </div>

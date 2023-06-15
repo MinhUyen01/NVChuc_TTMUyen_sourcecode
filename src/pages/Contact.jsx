@@ -25,20 +25,20 @@ const Contact = () => {
           <form id="contact-form" method="POST" action="assets/mail.php">
             <div className="row">
               <div className="col-lg-6">
-                <input name="name" placeholder="Tên *" type="text" />    
+                <input name="name" placeholder="Tên" type="text" />    
               </div>
               <div className="col-lg-6">
-                <input name="email" placeholder="Email *" type="email" />    
+                <input name="email" placeholder="Email" type="email" />    
               </div>
               <div className="col-lg-6">
-                <input name="subject" placeholder="Tiêu đề *" type="text" />   
+                <input name="subject" placeholder="Tiêu đề" type="text" />   
               </div>
               <div className="col-lg-6">
-                <input name="phone" placeholder="SĐT *" type="text" />   
+                <input name="phone" placeholder="SĐT" type="text" />   
               </div>
               <div className="col-12">
                 <div className="contact_textarea">
-                  <textarea placeholder="Message *" name="message" className="form-control2" defaultValue={""} />     
+                  <textarea placeholder="Message" name="message" className="form-control2" defaultValue={""} />     
                 </div>   
                 <button type="submit"> Gửi </button>  
               </div> 
@@ -55,8 +55,8 @@ const Contact = () => {
           <p>Beauty Outfits cho thuê trang phục, phụ kiện chuyên nghiệp với giá cả tốt và nhiệt tình nhất.</p>
           <ul>
             <li><i className="fa fa-fax" />   Địa chỉ : Phan Hành Sơn, phường Mỹ An, Quận Ngũ Hành Sơn, Đà Nẵng, Việt Nam</li>
-            <li><i className="fa fa-phone" /> <a href="#">uyentran99899@gmail.com</a></li>
-            <li><i className="fa fa-envelope-o" /> 096 717 7830</li>
+            <li><i className="fa fa-phone" /> <a href="#">096 717 7830</a></li>
+            <li><i className="fa fa-envelope-o" /> uyentran99899@gmail.com</li>
           </ul>        
           <h3><strong>Thời gian làm việc</strong></h3>
           <p>Thứ 2 – Thứ 6: 8h – 22h</p>       

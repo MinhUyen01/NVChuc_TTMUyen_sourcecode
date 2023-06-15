@@ -41,7 +41,7 @@ export default function OrderUser() {
     };
 
     return (
-        <div className="container col-md-7">
+        <div className="container " style={{maxWidth: "69.98%"}}>
             <div className="pos_page_inner">
                 {/* <div className="row"> */}
                 <div className="content">
@@ -53,6 +53,7 @@ export default function OrderUser() {
                                         href={`#tab${idx + 1}`}
                                         data-toggle="tab"
                                         className={`nav-link ${selected === idx ? "active" : ""}`}
+                                        style={{padding: "8px 29px"}}
                                     >
                                         {ele.name}
                                     </a>

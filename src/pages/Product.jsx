@@ -47,13 +47,20 @@ const Product = () => {
                                         <span
                                             className="product_title"
                                             style={{
-                                                fontSize: 76,
+                                                textShadow: "0 0 1px #000",
+                                                fontSize: 60,
                                                 color: "#ffffff",
                                             }}
                                         >
                                             Beauty Outfits
                                         </span>
-                                        <p className="mt-4">Thời trang cho mọi người - mặc là đẹp.</p>
+                                        <p 
+                                        style={{
+                                            textShadow: "0 0 1px #000",
+                                            fontSize: 24,
+                                            fontWeight: 600,
+                                        }}
+                                        className="mt-4">Thời trang cho mọi người - mặc là đẹp.</p>
                                     </div>
                                 </div>
                             </div>
@@ -67,7 +74,7 @@ const Product = () => {
                                 <div className="list_button">
                                     <div className="select_option">
                                         <form action="#">
-                                            <label>Sắp xếp theo</label>
+                                            <label style={{fontSize: 16, fontWeight: 500, color: "#626262"}}>Sắp xếp theo</label>
                                             <select
                                                 className="select-default"
                                                 name="orderby"
@@ -75,6 +82,7 @@ const Product = () => {
                                                 style={{
                                                     backgroundColor: "#ffffff",
                                                     border: "1px solid #DDDDDD",
+                                                    cursor: "pointer",
                                                 }}
                                             >
                                                 <option selected value={1}>
@@ -94,11 +102,11 @@ const Product = () => {
                                 </div>
                                 <div className="select_option">
                                     <form action="#">
-                                        <label>Giới tính</label>
+                                        <label style={{fontSize: 16, fontWeight: 500, color: "#626262"}}>Giới tính</label>
                                         <select
                                             name="orderby"
                                             id="short"
-                                            style={{ backgroundColor: "#ffffff", border: "1px solid #DDDDDD" }}
+                                            style={{ backgroundColor: "#ffffff", border: "1px solid #DDDDDD", cursor: "pointer", }}
                                         >
                                             <option selected value={1}>
                                                 Mặc định
@@ -147,9 +155,9 @@ const Product = () => {
                                                         >
                                                             {dataProduct[idx].oldPrice}
                                                         </p>
-                                                        <p>- 50%</p>
+                                                        <p style={{ display: "inline", fontSize: 15, fontWeight: 500}}>- 50%</p>
                                                     </div>
-                                                    <br />
+                                                    {/* <br /> */}
                                                     <span className="" style={{ fontSize: 18, fontWeight: 700 }}>
                                                         {dataProduct[idx].price}
                                                     </span>
@@ -161,7 +169,7 @@ const Product = () => {
                                                             fillColor="#00BBA6"
                                                             className="p-0 m-0"
                                                         />
-                                                        <span>Đã thuê: 76</span>
+                                                        <span style={{fontSize: 12, fontWeight: 500}}>Đã thuê: 76</span>
                                                     </div>
                                                 </div>
                                                 <div className="product_info">

@@ -17,7 +17,7 @@ export function Deliveries() {
                     <input
                         type="text"
                         className="form-control"
-                        placeholder="tìm đơn hàng theo 'Mã đơn hàng' hoặc 'Tên sản phẩm'"
+                        placeholder="Tìm đơn hàng theo 'Mã đơn hàng' hoặc 'Tên sản phẩm'"
                     />
                 </div>
             </div>

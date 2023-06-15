@@ -74,7 +74,7 @@ export default function UserLayout({ children }) {
                     </div>
                 </div>
             </div>
-            <div className="row" style={{ padding: "20px " }}>
+            <div className="row" style={{ padding: "30px " }}>
                 <div className="col-md-3">
                     <ul className="list-group" style={{ gap: 4 }}>
                         {items.map((item, index) => (

@@ -3363,8 +3363,8 @@
 
 	/* 'Shrink-wrap' the element */
 	display: inline-block;
-	*display: inline;
-	*zoom: 1;
+	display: inline;
+	zoom: 1;
 }
 
 .easyzoom img {

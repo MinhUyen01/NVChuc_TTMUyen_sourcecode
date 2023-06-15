@@ -1,8 +1,17 @@
+import { Link, useNavigate } from "react-router-dom";
 export default function Completed({ setSelected, steps, setSteps, idx}) {
+    const navigate = useNavigate();
     const handlePrevious = () => {
         setSelected(idx - 1);
         steps[idx].active = false;
         setSteps(steps);
+    }
+
+    const home = () => {
+        navigate("/", { replace: true });
+    }
+    const continuetorent = () => {
+        navigate("/user/order", { replace: true });
     }
     return (
         <div className="container d-flex flex-column align-items-center justify-content-center" style={{ padding: "20px 50px" }}>
@@ -16,22 +25,25 @@ export default function Completed({ setSelected, steps, setSteps, idx}) {
                 </span>
                 <div className="d-flex justify-content-center" style={{ gap: 10 }}>
                     <button
-                        className="btn btn-success col-3"
-                        style={{ backgroundColor: "#00BBA6", color: "#ffffff", fontWeight: 700, fontSize: 16 }}
+                        className="btn btn-active-darkgreen col-3"
+                        style={{ cursor: "pointer", height: 38, color: "#ffffff", fontWeight: 700, fontSize: 16 }}
+                        onClick={home}
                     >
-                        Quay về trang chủ
+                        Quay Về Trang Chủ
                     </button>
                     <button
-                        style={{ backgroundColor: "#00BBA6", color: "#ffffff", fontWeight: 700, fontSize: 16 }}
-                        className="btn btn-success col-3"
+                        style={{ cursor: "pointer", height: 38, color: "#ffffff", fontWeight: 700, fontSize: 16 }}
+                        className="btn btn-active-darkgreen col-3"
+                        onClick={continuetorent}
                     >
-                        Xem đơn hàng
+                        Xem Đơn Hàng
                     </button>
                 </div>
             </div>
-            <div className="d-flex justify-content-start mt-2" style={{width: "100%"}}>
-                <button className="btn" onClick={()=> handlePrevious()} style={{border:"none", backgroundColor:"transparent", color: "#00BBA6", cursor: "pointer", fontStyle: "normal", fontWeight:"bold", fontSize: 18}}>{"<<"} Quay lại</button>
-            </div>
+            {/* <div className="d-flex justify-content-start mt-2" style={{width: "100%"}}>
+                <button className="btn" onClick={()=> handlePrevious()} 
+                style={{border:"none", backgroundColor:"transparent", color: "#00BBA6", cursor: "pointer", fontStyle: "normal", fontWeight:"bold", fontSize: 18}}>{"<<"} Quay lại</button>
+            </div> */}
         </div>
     );
 }

@@ -75,6 +75,58 @@ a,
     height: 30px;
     line-height: 30px;
 }
+
+.btn-hover-red {
+    color: #333;
+    background-color: #fff;
+    cursor: pointer;
+}
+.btn-hover-red:hover {
+    color: #E84C3D;
+}
+
+.btn-active-red {
+    border-radius: 3px;
+    color: #ffffff;
+    background-color: #00BBA6!important;
+    cursor: pointer;
+    border-color: #00BBA6!important;
+}
+
+.btn-active-red:hover {
+    border-radius: 3px;
+    background-color: #E84C3D!important;
+    border-color: #E84C3D!important;
+}
+
+.btn-active-darkgreen {
+    border-radius: 3px;
+    color: #ffffff;
+    background-color: #00BBA6!important;
+    cursor: pointer;
+    border-color: #00BBA6!important;
+}
+
+.btn-active-darkgreen:hover {
+    border-radius: 3px;
+    background-color: #018576!important;
+    border-color: #018576!important;
+}
+
+.btn-active-greyish {
+    border-radius: 3px;
+    color: #333;
+    background-color: #fff!important;
+    cursor: pointer;
+    border: 1px solid #dddddd !important;
+}
+
+.btn-active-greyish:hover {
+    border-radius: 3px;
+    border: 1px solid #dddddd !important;
+    background-color: #faf9f6!important;
+}
+
 a:focus,
 .btn:focus {
     text-decoration: none;
@@ -97,6 +149,11 @@ input {
 input:focus,select:focus,textarea:focus{
 	outline: none;
 }
+
+input[type='checkbox'] {
+    accent-color: #018576;
+  }
+
 .uppercase { 
     text-transform: uppercase
 }
@@ -154,6 +211,7 @@ p {
     font-weight: normal;
     line-height: 24px;
     margin-bottom: 10px;
+    font-weight: 500;
  }
 
 hr{
@@ -246,6 +304,10 @@ textarea {
     transition: all 0.5s ease-out 0s;
 }
 
+.select:optional {
+    height: 45px;
+}
+
 /*************************
          button
 *************************/
@@ -317,19 +379,29 @@ input:focus {
     background: transparent;
     border: 1px solid #4FC1F0;
 }
+input:valid {
+    color: #333;
+    font-size: 16;
+    font-weight: 500;
+}
 textarea {
     resize: vertical;
     background: #eceff8;
-    border: 2px solid #eceff8;
+    border: 1px solid #dddddd;
     padding: 10px;
     width: 100%;
     font-size: 14px;
 }
 textarea:focus {
     background: transparent;
-    border: 2px solid #4FC1F0;
+    border: 1px solid #4FC1F0;
     outline: none;
 }
+textarea::placeholder {
+    color: #333;
+    font-size: 18px;
+    font-weight: 600;
+  }
 ::-moz-placeholder {
     color: #444;
 }

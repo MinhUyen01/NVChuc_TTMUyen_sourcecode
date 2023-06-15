@@ -122,14 +122,14 @@ const DetailProduct = () => {
                                         </li>
                                     </ul>
                                 </div>
-                                <div className="tab-content produc_tab_c">
+                                <div className="tab-content produc_tab_c" style={{width: "65%"}}>
                                     <div className="tab-pane fade show active" id="p_tab1" role="tabpanel">
                                         <div className="modal_img">
                                             <a href="#">
                                                 <img src={product.img} alt="" />
                                             </a>
                                             <div className="img_icone">
-                                                <img src={product.img} alt="" />
+                                                <img src={product.status} alt="" />
                                             </div>
                                             <div className="view_img">
                                       
@@ -160,7 +160,7 @@ const DetailProduct = () => {
                                                 <img src={product.img} alt="" />
                                             </a>
                                             <div className="img_icone">
-                                                <img src={product.status} alt="" />
+                                                <img src={product.img} alt="" />
                                             </div>
                                             <div className="view_img">
                                                 {/* <a
@@ -207,8 +207,8 @@ const DetailProduct = () => {
                                             </a>
                                         </li>
                                         <li className="ml-3">
-                                            <a className="star_total_text" href="#">
-                                                Còn lại: 29 | Đã thuê: 76{" "}
+                                            <a className="star_total_text" href="#" style={{fontStyle: "normal", fontSize: 14, fontWeight: 600, fontFamily: "Quicksand"}}>
+                                                Còn lại: 29  |  Đã thuê: 76{" "}
                                             </a>
                                         </li>
                                     </ul>
@@ -221,7 +221,7 @@ const DetailProduct = () => {
                                 </div>
                                 <div className="box_quantity mb-20">
                                     <form action="#">
-                                        <label>Số lượng</label>
+                                        <label style={{fontSize: 16, fontWeight: 700, color: "#333", textTransform: "capitalize"}}>Số lượng</label>
                                         <input min={0} max={100} defaultValue={1} type="number" />
                                     </form>
 
@@ -230,7 +230,7 @@ const DetailProduct = () => {
                                     </a>
                                 </div>
                                 <div className="product_d_size mb-20">
-                                    <label htmlFor="group_1">size</label>
+                                    <label htmlFor="group_1" style={{fontSize: 16, fontWeight: 700, color: "#333", textTransform: "capitalize"}}>size</label>
                                     <select className="detail_prod_size" name="size" id="group_1">
                                         <option value={1}>S</option>
                                         <option value={2}>M</option>
@@ -238,7 +238,7 @@ const DetailProduct = () => {
                                     </select>
                                 </div>
                                 <div className="sidebar_widget color">
-                                    <h2>Choose Color</h2>
+                                    <h2 style={{fontSize: 16, fontWeight: 700, color: "#333", textTransform: "capitalize"}}>Chọn màu</h2>
                                     <div className="widget_color">
                                         <ul>
                                             <li>
@@ -258,7 +258,7 @@ const DetailProduct = () => {
                                     </div>
                                 </div>
                                 <div className="product_desc">
-                                    <p>
+                                    <p style={{fontSize: 15, fontWeight: 500, color: "#555"}}>
                                         Áo dài trắng chất vải lụa tằm may dáng áo dài truyền thống 4 tà đẹp. Thiết kế
                                         may sẵn 2 tà rộng với 1 tà trước và 1 tà sau dày dặn không lo bị xuyên thấu khi
                                         mặc, kiểu thiết kế cổ cao 2cm ôm eo tạo dáng thanh lịch, hiện đại, thướt tha.
@@ -351,8 +351,8 @@ const DetailProduct = () => {
                                 <div className="tab-pane fade show active" id="info" role="tabpanel">
                                     <div className="product_info_content">
                                         <p>
-                                            - Áo dài trắng 4 tà may sẵn bởi vải lụa chiffon màu trắng. - Vải chiffon là
-                                            loại vải mỏng nhẹ, thoáng mát, co giãn tốt và rất thoáng mát khi mặc. -
+                                            - Áo dài trắng 4 tà may sẵn bởi vải lụa chiffon màu trắng.<br />- Vải chiffon là
+                                            loại vải mỏng nhẹ, thoáng mát, co giãn tốt và rất thoáng mát khi mặc.<br />-
                                             Thiết kế may sẵn 4 tà rộng với 2 tà trước và 2 tà sau dày dặn không lo bị
                                             xuyên thấu khi mặc, kiểu thiết kế cổ cao 2cm ôm eo tạo dáng thanh lịch, hiện
                                             đại, thướt tha.
@@ -394,6 +394,7 @@ const DetailProduct = () => {
                                 <div className="tab-pane fade" id="reviews" role="tabpanel">
                                     <div className="product_info_inner">
                                         <div className=" mb-10">
+                                            <p style={{ fontWeight: 700, fontSize: 18 }}>Hàng chuẩn mô tả</p>
                                             <Rating
                                                 size={15}
                                                 initialValue={4}
@@ -401,9 +402,9 @@ const DetailProduct = () => {
                                                 className="p-0 m-0"
                                             />
                                             <br />
-                                            <p style={{ fontWeight: 700, fontSize: 15 }}>Hàng chuẩn mô tả</p>
-                                            <p style={{ fontWeight: 500, fontSize: 15 }}>09/07/2018</p>
-                                            <p>
+                                            
+                                            <p style={{ fontWeight: 500, fontSize: 15 }}>20/04/2023</p>
+                                            <p style={{fontWeight: 500, fontSize: 15}}>
                                                 Áo đẹp và chất lượng lắm bà con ơi! Mình sẽ ủng hộ shop này dài dài.
                                                 Thuê trúng đợt shop ưu đãi giảm giá, vải chất lượng đã vậy còn được giảm
                                                 giá nữa chứ, thích quá thích. Không phải tự dưng mà tuy khen shop này
@@ -414,10 +415,10 @@ const DetailProduct = () => {
                                             </p>
                                         </div>
                                     </div>
-                                    <div className="product_review_form">
+                                    <div className="product_review_form" style={{marginTop: 30}}>
                                         <h2>THÊM ĐÁNH GIÁ </h2>
-                                        <div className="d-flex align-items-center" style={{ gap: 10 }}>
-                                            <p style={{ marginBottom: 0, fontWeight: 500, fontSize: 16 }}>
+                                        <div className="d-flex align-items-center" style={{marginTop: 20, gap: 10 }}>
+                                            <p style={{ marginBottom: 10, fontWeight: 600, fontSize: 16 }}>
                                                 Đánh giá sản phẩm
                                             </p>
                                             <Rating
@@ -428,10 +429,10 @@ const DetailProduct = () => {
                                             />
                                         </div>
                                         <div className="row">
-                                            <div className="col-12">
+                                            <div className="col-12" style={{marginBottom: 30}}>
                                                 <label
                                                     htmlFor="review_comment"
-                                                    style={{ fontWeight: 500, fontSize: 16 }}
+                                                    style={{ fontWeight: 600, fontSize: 16, color: "#333" }}
                                                 >
                                                     Tiêu đề đánh giá
                                                 </label>
@@ -446,13 +447,13 @@ const DetailProduct = () => {
                                             <div className="col-12">
                                                 <label
                                                     htmlFor="review_comment"
-                                                    style={{ fontWeight: 500, fontSize: 16 }}
+                                                    style={{ fontWeight: 600, fontSize: 16, color: "#333" }}
                                                 >
                                                     Viết đánh giá của bạn
                                                 </label>
                                                 <textarea
                                                     placeholder="Viết đánh giá của bạn tại đây. Nội dung đánh giá phải ít nhất 20 ký tự."
-                                                    style={{ height: 69 }}
+                                                    style={{ height: 70 }}
                                                     name="comment"
                                                     id="review_comment"
                                                     defaultValue={""}
@@ -460,8 +461,8 @@ const DetailProduct = () => {
                                             </div>
                                         </div>
                                         <button
-                                            className="btn btn-success btn_rating"
-                                            style={{ backgroundColor: "#009483", marginTop: 5 }}
+                                            className="btn btn-active-red btn_rating"
+                                            style={{ textTransform: "uppercase", height: 38, fontSize: 16, fontWeight: 600, marginTop: 5 }}
                                         >
                                             Gửi
                                         </button>

@@ -31,19 +31,19 @@ const Cart = () => {
     // stepper
     const items = [
         {
-            title: "Giỏ hàng",
+            title: "GIỎ HÀNG",
             id: "cart",
             content: <CartComponent />,
             active: true,
         },
         {
-            title: "Thanh toán",
+            title: "THANH TOÁN",
             id: "payment",
             content: <PaymentComponent />,
             active: false,
         },
         {
-            title: "Hoàn tất",
+            title: "HOÀN TẤT",
             id: "compeleted",
             content: <Completed />,
             active: false,
@@ -55,7 +55,7 @@ const Cart = () => {
     return (
         <div className="">
             <div className="bs-stepper">
-                <div className="bs-stepper-header" role="tablist">
+                <div className="bs-stepper-header" role="tablist" style={{borderBottom: "1px solid #dddddd"}}>
                     <div className="logo">
                         <Link to={"/"}>
                             <img src={Logo} alt="" />
@@ -63,7 +63,7 @@ const Cart = () => {
                     </div>
                     {steps.map((step, idx) => (
                         <React.Fragment key={step.id}>
-                            <div className={step.active ? "step active" : "step"} data-target={`#${step.id}`}>
+                            <div className={step.active ? "step active" : "step"} data-target={`#${step.id}`} style={{pointerEvents: "none"}}>
                                 <button
                                     onClick={() => {}}
                                     type="button"
@@ -77,7 +77,7 @@ const Cart = () => {
                                         className="bs-stepper-circle"
                                         style={{
                                             borderRadius: "50%",
-                                            backgroundColor: step.active ? "#00bba6" : "",
+                                            backgroundColor: step.active ? "#018576" : "",
                                             height: 67,
                                             width: 67,
                                             fontSize: 35,
@@ -123,6 +123,7 @@ const Cart = () => {
                         className={`content ${selected === 0 && "active"}`}
                         role="tabpanel"
                         aria-labelledby="cart"
+                        style={{marginTop: 30}}
                     >
                         <CartComponent steps={steps} setSelected={setSelected} setSteps={setSteps} idx={selected} />
                     </div>

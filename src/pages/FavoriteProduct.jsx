@@ -25,9 +25,10 @@ export default function FavoriteProduct() {
                                         <p style={{
                                             textDecoration:"line-through",
                                             fontStyle: "normal",
-                                            fontWeight: 400,
-                                            fontSize: 14,
-                                        }}>{dataProduct[idx].oldPrice}</p><p style={{
+                                            fontWeight: 500,
+                                            fontSize: 15,
+                                        }}>{dataProduct[idx].oldPrice}</p>
+                                        <p style={{
                                             fontStyle: "normal",
                                             fontWeight: 500,
                                             fontSize: 15,
@@ -43,21 +44,30 @@ export default function FavoriteProduct() {
                                         fontSize: 18,
                                     }}>{dataProduct[idx].price}</p>
                                 </div>
+                                <p style={{
+                                            fontStyle: "normal",
+                                            fontWeight: 500,
+                                            fontSize: 13,
+                                 }}>Còn lại: 29</p>
                             </div>
                         </div>
 
                         <div className=" pr-3 row flex-column justify-content-between align-items-end">
-                            <input type="button" style={{color: "#00BBA6"}} className="text-right p-0 btn btn-link col-md-4" value="Xoá" />
+                            <input type="button" style={{fontSize: 16, fontWeight: 600, cursor: "pointer", color: "#00BBA6"}} className="text-right p-0 btn btn-link col-md-4" value="Xoá" />
 
                             <div className="option-btn right">
                                 <button
-                                    className="btn btn-success btn_add_cart"
+                                    className="btn btn-active-red"
                                     style={{
+                                        width: 220,
+                                        height: 38,
+                                        fontSize: 16,
+                                        fontWeight: 600,
                                         border: "none",
                                         backgroundColor: "#00BBA6",
                                     }}
                                 >
-                                    Thêm vào giỏ hàng
+                                    Thêm Vào Giỏ Hàng
                                 </button>
                             </div>
                         </div>

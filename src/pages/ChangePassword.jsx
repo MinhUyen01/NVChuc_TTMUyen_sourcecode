@@ -52,10 +52,10 @@ export default function ChangePassword() {
                     <div className="d-flex justify-content-center">
                         <button
                             onClick={(e) => e.preventDefault()}
-                            className="btn btn-success col-md-4"
-                            style={{ backgroundColor: "#00BBA6", color: "#ffffff" }}
+                            className="btn btn-active-darkgreen col-md-4"
+                            style={{ height: 38, width: 195, fontSize: 16, fontWeight: 600 }}
                         >
-                            Xác nhận
+                            Xác Nhận
                         </button>
                     </div>
                 </div>

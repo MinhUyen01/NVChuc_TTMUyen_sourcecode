@@ -1,35 +1,57 @@
-import ThieuNhi from "../assets/img/thieunhi.png";
-import TruyenThong from "../assets/img/truyenthong.png";
-import CaCNuoc from "../assets/img/cacnuoc.png";
-import HoaTrang from "../assets/img/hoatrang.png";
+import ThieuNhi from "../assets/img/thieunhi.jpg";
+import TruyenThong from "../assets/img/truyenthong.jpg";
+import CacNuoc from "../assets/img/cacnuoc.jpg";
+import HoaTrang from "../assets/img/hoatrang.jpg";
 import ThuongNgay from "../assets/img/thuongngay.png";
-import DuTiec from "../assets/img/dutie.png";
+import DuTiec from "../assets/img/dutiec.jpg";
 
-import Quat from "../assets/img/quat.png";
-import TramCai from "../assets/img/tramcai.png";
-import TuiXach from "../assets/img/tuixach.png";
-import Dep from "../assets/img/dep.png";
-import Cavat from "../assets/img/cavat.png";
-import TocGia from "../assets/img/tocgia.png";
+import Quat from "../assets/img/quat.jfif";
+import TramCai from "../assets/img/botramcaitoc.jfif";
+import TuiXach from "../assets/img/tuixach.jfif";
+import Dep from "../assets/img/giaydep.jpg";
+import Cavat from "../assets/img/cavat_no.jfif";
+import TocGia from "../assets/img/tocgia.jfif";
 
 import Carousel from "react-bootstrap/Carousel";
 
 import SpanNew from "../assets/img/cart/span-new.png";
-import Product1 from "../assets/img/product/pr1.png";
-import Product2 from "../assets/img/product/pr2.png";
-import Product3 from "../assets/img/product/pr3.png";
-import Product4 from "../assets/img/product/pr4.png";
-import Product5 from "../assets/img/product/pr5.png";
-import Product6 from "../assets/img/product/pr6.png";
-import Product7 from "../assets/img/product/pr7.png";
-import Product8 from "../assets/img/product/pr8.png";
-import Product9 from "../assets/img/product/pr9.png";
-import Product10 from "../assets/img/product/pr10.png";
-import Product11 from "../assets/img/product/pr11.png";
+import SpanHot from "../assets/img/cart/span-hot.png";
 
-import slider2 from "../assets/img/slider/slider_2.png";
-import slider3 from "../assets/img/slider/slider_3.png";
-import slider4 from "../assets/img/slider/slide_4.png";
+// import Product1 from "../assets/img/product/pr1.png";
+// import Product2 from "../assets/img/product/pr2.png";
+// import Product3 from "../assets/img/product/pr3.png";
+// import Product4 from "../assets/img/product/pr4.png";
+// import Product5 from "../assets/img/product/pr5.png";
+// import Product6 from "../assets/img/product/pr6.png";
+// import Product7 from "../assets/img/product/pr7.png";
+// import Product8 from "../assets/img/product/pr8.png";
+// import Product9 from "../assets/img/product/pr9.png";
+// import Product10 from "../assets/img/product/pr10.png";
+// import Product11 from "../assets/img/product/pr11.png";
+
+
+
+// import SpanHot from "../assets/img/cart/span-hot.png";
+import Product1 from "../assets/img/product/pr1.jpg";
+import Product2 from "../assets/img/product/pr2.jpg";
+import Product3 from "../assets/img/product/pr3.jpeg";
+import Product4 from "../assets/img/product/pr4.jpg";
+import Product5 from "../assets/img/product/pr5.jfif";
+import Product6 from "../assets/img/product/pr6.jfif";
+import Product7 from "../assets/img/product/pr7.jfif";
+import Product8 from "../assets/img/product/pr8.jfif";
+import Product9 from "../assets/img/product/pr9.jfif";
+import Product10 from "../assets/img/product/pr10.jpg";
+import Product11 from "../assets/img/product/pr11.jfif";
+import Product12 from "../assets/img/product/pr12.jfif";
+
+import Product13 from "../assets/img/product/pr13.jpg";
+import Produc14 from "../assets/img/product/pr14.jpg";
+import Produc15 from "../assets/img/product/pr15.jpg";
+
+import slider2 from "../assets/img/slider/slider1.jpg";
+import slider3 from "../assets/img/slider/slider2.jpeg";
+import slider4 from "../assets/img/slider/slider3.jpg";
 import { useCallback, useEffect, useRef, useState } from "react";
 
 // slick
@@ -86,7 +108,7 @@ const Home = () => {
                         <div className="carousel-inner">
                             <div className="carousel-item active">
                                 <img
-                                    style={{ height: 550 }}
+                                    // style={{ height: 550 }}
                                     className="d-block w-100"
                                     src={slider2}
                                     alt="First slide"
@@ -96,14 +118,14 @@ const Home = () => {
                                     <p className="carousel-subtitle">Thời trang cho mọi người - mặc là đẹp.</p>
                                 </div>
                             </div>
-                            <div className="carousel-item" style={{ height: 550 }}>
+                            <div className="carousel-item" >
                                 <img className="d-block w-100" src={slider3} alt="Second slide" />
                                 <div className="carousel-caption d-none d-md-block">
                                     <span className="caorousel-title">Beauty Outfits</span>
                                     <p className="carousel-subtitle">Thời trang cho mọi người - mặc là đẹp.</p>
                                 </div>
                             </div>
-                            <div className="carousel-item" style={{ height: 550 }}>
+                            <div className="carousel-item" >
                                 <img className="d-block w-100" src={slider4} alt="Third slide" />
                                 <div className="carousel-caption d-none d-md-block">
                                     <span className="caorousel-title">Beauty Outfits</span>
@@ -173,7 +195,7 @@ const Home = () => {
                             <div className="single_product">
                                 <div className="product_thumb">
                                     <a href="">
-                                        <img src={CaCNuoc} alt="" />
+                                        <img src={CacNuoc} alt="" />
                                     </a>
                                 </div>
                                 <div className="product_content mt-3 d-flex justify-content-center">
@@ -241,7 +263,7 @@ const Home = () => {
                             <div className="single_product">
                                 <div className="product_thumb">
                                     <a href="">
-                                        <img src={Quat} alt="" />
+                                        <img src={TocGia} alt="" />
                                     </a>
                                 </div>
                                 <div className="product_content mt-3 d-flex justify-content-center">
@@ -255,7 +277,7 @@ const Home = () => {
                             <div className="single_product">
                                 <div className="product_thumb">
                                     <a href="">
-                                        <img src={TramCai} alt="" />
+                                        <img src={Cavat} alt="" />
                                     </a>
                                 </div>
                                 <div className="product_content mt-3 d-flex justify-content-center">
@@ -269,7 +291,7 @@ const Home = () => {
                             <div className="single_product">
                                 <div className="product_thumb">
                                     <a href="">
-                                        <img src={TuiXach} alt="" />
+                                        <img src={Dep} alt="" />
                                     </a>
                                 </div>
                                 <div className="product_content mt-3 d-flex justify-content-center">
@@ -283,7 +305,7 @@ const Home = () => {
                             <div className="single_product">
                                 <div className="product_thumb">
                                     <a href="">
-                                        <img src={Dep} alt="" />
+                                        <img src={TuiXach} alt="" />
                                     </a>
                                 </div>
                                 <div className="product_content mt-3 d-flex justify-content-center">
@@ -297,7 +319,7 @@ const Home = () => {
                             <div className="single_product">
                                 <div className="product_thumb">
                                     <a href="">
-                                        <img src={Cavat} alt="" />
+                                        <img src={TramCai} alt="" />
                                     </a>
                                 </div>
                                 <div className="product_content mt-3 d-flex justify-content-center">
@@ -311,7 +333,7 @@ const Home = () => {
                             <div className="single_product">
                                 <div className="product_thumb">
                                     <a href="">
-                                        <img src={TocGia} alt="" />
+                                        <img src={Quat} alt="" />
                                     </a>
                                 </div>
                                 <div className="product_content mt-3 d-flex justify-content-center">
@@ -404,8 +426,8 @@ const Home = () => {
                                                 style={{
                                                     display: "inline",
                                                     marginBottom: 0,
-                                                    fontWeight: 400,
-                                                    fontSize: 14,
+                                                    fontWeight: 500,
+                                                    fontSize: 15,
                                                 }}
                                             >
                                                 - 50%
@@ -422,7 +444,7 @@ const Home = () => {
                                                 fillColor="#00BBA6"
                                                 className="p-0 m-0"
                                             />
-                                            <span>Đã thuê: 76</span>
+                                            <span style={{fontSize: 12, fontWeight: 500}}>Đã thuê: 76</span>
                                         </div>
                                     </div>
                                     <div className="product_info">
@@ -446,11 +468,11 @@ const Home = () => {
                         <div className="col-lg-4 col-md-6">
                             <div className="single_banner">
                                 <a href="#">
-                                    <img src={Product5} alt="" />
+                                    <img src={Product13} alt="" />
                                 </a>
                                 <div className="banner_title">
                                     <p>
-                                        Up to <span> 40%</span> off
+                                        Giảm <span> 40%</span>
                                     </p>
                                 </div>
                             </div>
@@ -458,11 +480,11 @@ const Home = () => {
                         <div className="col-lg-4 col-md-6">
                             <div className="single_banner">
                                 <a href="#">
-                                    <img src={Product6} alt="" />
+                                    <img src={Produc14} alt="" />
                                 </a>
                                 <div className="banner_title title_2">
                                     <p>
-                                        sale off <span> 30%</span>
+                                        Giảm <span> 50%</span>
                                     </p>
                                 </div>
                             </div>
@@ -470,11 +492,11 @@ const Home = () => {
                         <div className="col-lg-4 col-md-6">
                             <div className="single_banner">
                                 <a href="#">
-                                    <img src={Product7} alt="" />
+                                    <img src={Produc15} alt="" />
                                 </a>
                                 <div className="banner_title title_3">
                                     <p>
-                                        sale off <span> 30%</span>
+                                        Giảm <span> 60%</span>
                                     </p>
                                 </div>
                             </div>
@@ -532,8 +554,8 @@ const Home = () => {
                                         <Link to={`/detail-product/${product.id}`}>
                                             <img src={product.img} alt="" />
                                         </Link>
-                                        <div className="img_icone">
-                                            <img src={SpanNew} alt="" />
+                                        <div className="hot_img">
+                                            <img src={SpanHot} alt="" />
                                         </div>
                                         <div className="product_action">
                                             <Link to={`/detail-product/${product.id}`}>
@@ -547,7 +569,7 @@ const Home = () => {
                                         </h3>
                                         <p
                                             className="old-price"
-                                            style={{ textDecoration: "line-through", display: "inline" }}
+                                            style={{ textDecoration: "line-through", display: "inline", marginRight: 5 }}
                                         >
                                             {product.oldPrice}
                                         </p>
@@ -555,8 +577,8 @@ const Home = () => {
                                                 style={{
                                                     display: "inline",
                                                     marginBottom: 0,
-                                                    fontWeight: 400,
-                                                    fontSize: 14,
+                                                    fontWeight: 500,
+                                                    fontSize: 15,
                                                 }}
                                             >
                                                 - 50%
@@ -573,7 +595,7 @@ const Home = () => {
                                                 fillColor="#00BBA6"
                                                 className="p-0 m-0"
                                             />
-                                            <span>Đã thuê: 76</span>
+                                            <span style={{fontSize: 12, fontWeight: 500}}>Đã thuê: 76</span>
                                         </div>
                                     </div>
                                     <div className="product_info">
